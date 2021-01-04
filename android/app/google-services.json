@@ -1,0 +1,84 @@
+{
+  "project_info": {
+    "project_number": "576279841337",
+    "firebase_url": "https://tanqeehat.firebaseio.com",
+    "project_id": "tanqeehat",
+    "storage_bucket": "tanqeehat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576279841337:android:653f16c38b18859e951be8",
+        "android_client_info": {
+          "package_name": "com.lettechnologies.ahsanulquran"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576279841337-us3sn3lirvbeti5v531mj2q5pravppf3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2WQKm0LrT6k_LSsjM79kxspAe5Kjh9gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576279841337-us3sn3lirvbeti5v531mj2q5pravppf3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "576279841337-0b7l34b4s2untifljj7mkdtfmuv8jqlu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lettechnologies.Sahih-Bukhari-Pro"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-9152919921144751~2913324796"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576279841337:android:b5e52434d3394a1d951be8",
+        "android_client_info": {
+          "package_name": "com.lettechnologies.ibnekaseer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576279841337-us3sn3lirvbeti5v531mj2q5pravppf3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2WQKm0LrT6k_LSsjM79kxspAe5Kjh9gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576279841337-us3sn3lirvbeti5v531mj2q5pravppf3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "576279841337-0b7l34b4s2untifljj7mkdtfmuv8jqlu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lettechnologies.Sahih-Bukhari-Pro"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
