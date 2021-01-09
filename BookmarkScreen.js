@@ -149,6 +149,13 @@ class BookmarkScreen extends Component{
   componentDidMount(){
     // Data Base
     this.fetchDataFromDB();
+
+    this.setState({});
+
+    this.focusListener = this.props.navigation.addListener('focus', () => {
+      this.setState({});
+        //Put your Data loading function here instead of my this.LoadData()
+    });
   }
 
  componentWillUnmount() {
@@ -722,7 +729,7 @@ handleConnectionChange = (isConnected) => {
   }
 
   rowSelected(item){
-    Constants.readingheaderTitle= 'سورۃنمبر '+item.SurahNumber;
+    Constants.readingheaderTitle = 'سورۃنمبر '+item.SurahNumber;
      var data=[];
      data.push(item);
      // compare 2 mean from BookMark Screen

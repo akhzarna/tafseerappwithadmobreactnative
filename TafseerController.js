@@ -72,7 +72,8 @@ import admob, { MaxAdContentRating, InterstitialAd, RewardedAd, BannerAd, TestId
 // var Loader=require('./Loader')
 
 /* ## To Refresh Component When any change occur ## */
-// import { NavigationEvents } from 'react-navigation';
+
+import { NavigationEvents } from 'react-navigation';
 
 class TafseerController extends Component{
   constructor(props, route, navigation){
@@ -130,7 +131,7 @@ render() {
         </View>
 
          <View style={styles.textViewHeader}>
-            <Text style={styles.titleStyle}> Ahsan Ul Bayan </Text>
+            <Text style={styles.titleStyle}> {this.props.route.params.data.nameArabic} </Text>
          </View>
 
          <View style={styles.iconView}>
@@ -532,6 +533,13 @@ render() {
   }
 
   componentDidMount(){
+
+        this.setState({});
+
+        this.focusListener = this.props.navigation.addListener('focus', () => {
+          this.setState({});
+            //Put your Data loading function here instead of my this.LoadData()
+        });
 
     // console.log("TafseerController Compare Data is = ",this.props.navigation.state.params.compare);
     console.log("TafseerController Compare Data is = ",this.props.route.params.compare);

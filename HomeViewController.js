@@ -34,6 +34,14 @@ class HomeViewController extends Component {
     .then(() => {
       // Request config successfully set!
     });
+
+    this.setState({});
+
+    this.focusListener = this.props.navigation.addListener('focus', () => {
+      this.setState({});
+        //Put your Data loading function here instead of my this.LoadData()
+    });
+    
   }
 
   rowSelected(item){
