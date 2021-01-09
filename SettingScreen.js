@@ -29,10 +29,10 @@ var AdCount=0;
 
 var backArrow=require('./Icons/back.png');
 
-import admob, { MaxAdContentRating, InterstitialAd, RewardedAd, BannerAd, TestIds, BannerAdSize } from '@react-native-firebase/admob';
+import admob, { MaxAdContentRating, InterstitialAd, AdEventType, RewardedAd, BannerAd, TestIds, BannerAdSize } from '@react-native-firebase/admob';
 
 class SettingScreen extends Component{
-  
+
 static options(passProps) {
   return {
     statusBar: {
@@ -265,8 +265,24 @@ var themeColr;
     }
   }
 
+  showInterstitialAd = () => {
+    // Create a new instance
+    const interstitialAd = InterstitialAd.createForAdRequest(TestIds.INTERSTITIAL);
+
+    // Add event handlers
+    interstitialAd.onAdEvent((type, error) => {
+        if (type === AdEventType.LOADED) {
+            interstitialAd.show();
+        }
+    });
+
+    // Load a new advert
+    interstitialAd.load();
+  }
+
 componentDidMount() {
 
+this.showInterstitialAd();
 //console.log('before value1',Constants.TxtSize);
 
 AsyncStorage.getItem("shaktiman").then((TextFONTval) => {

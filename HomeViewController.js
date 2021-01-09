@@ -10,13 +10,28 @@ var settings=require('./Icons/setting.png');
 
 // import { NavigationEvents } from 'react-navigation';
 
-import admob, { MaxAdContentRating, InterstitialAd, RewardedAd, BannerAd, TestIds, BannerAdSize } from '@react-native-firebase/admob';
+import admob, { MaxAdContentRating, InterstitialAd, AdEventType, RewardedAd, BannerAd, TestIds, BannerAdSize } from '@react-native-firebase/admob';
 
 class HomeViewController extends Component {
 
   constructor(props){
     super(props);
   }
+
+  // showInterstitialAd = () => {
+  //   // Create a new instance
+  //   const interstitialAd = InterstitialAd.createForAdRequest(TestIds.INTERSTITIAL);
+  //
+  //   // Add event handlers
+  //   interstitialAd.onAdEvent((type, error) => {
+  //       if (type === AdEventType.LOADED) {
+  //           interstitialAd.show();
+  //       }
+  //   });
+  //
+  //   // Load a new advert
+  //   interstitialAd.load();
+  // }
 
   componentDidMount(){
     admob()
@@ -41,7 +56,8 @@ class HomeViewController extends Component {
       this.setState({});
         //Put your Data loading function here instead of my this.LoadData()
     });
-    
+
+    // this.showInterstitialAd();
   }
 
   rowSelected(item){
@@ -83,6 +99,9 @@ class HomeViewController extends Component {
   bookMarkScreen = () => {
    this.props.navigation.navigate('BookmarkScreen');
    }
+
+  // InterstitialAd
+  // ca-app-pub-9152919921144751/2743599137
 
   render(){
 

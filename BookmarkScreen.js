@@ -60,7 +60,7 @@ var favIcon=require('./Icons/favicon.png');
 var settings=require('./Icons/setting.png');
 var backArrow=require('./Icons/back.png');
 
-import admob, { MaxAdContentRating, InterstitialAd, RewardedAd, BannerAd, TestIds, BannerAdSize } from '@react-native-firebase/admob';
+import admob, { MaxAdContentRating, InterstitialAd, AdEventType, RewardedAd, BannerAd, TestIds, BannerAdSize } from '@react-native-firebase/admob';
 
 /* ## To Refresh Component When any change occur ## */
 // import { NavigationEvents } from 'react-navigation';
@@ -89,6 +89,21 @@ class BookmarkScreen extends Component{
         activityShow:true,
         languageCode:null,
     }
+  }
+
+  showInterstitialAd = () => {
+    // Create a new instance
+    const interstitialAd = InterstitialAd.createForAdRequest(TestIds.INTERSTITIAL);
+
+    // Add event handlers
+    interstitialAd.onAdEvent((type, error) => {
+        if (type === AdEventType.LOADED) {
+            interstitialAd.show();
+        }
+    });
+
+    // Load a new advert
+    interstitialAd.load();
   }
 
   // ComponentWillReceiveProps(){
@@ -156,6 +171,8 @@ class BookmarkScreen extends Component{
       this.setState({});
         //Put your Data loading function here instead of my this.LoadData()
     });
+
+    this.showInterstitialAd();
   }
 
  componentWillUnmount() {
